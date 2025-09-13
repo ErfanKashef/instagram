@@ -4,8 +4,8 @@ import Input from "./input";
 import Button from "daisyui/components/button";
 import { Signin } from "./signin";
 
-export function LogIn() {
-    return (
+const LogIn = () => {
+  return (
     <div>
         <InstaTitle LogoWidth="255px" LogoHeight="87px"/>
         <span>
@@ -19,5 +19,6 @@ export function LogIn() {
         </span>
         
     </div>
-)
-}
+  );
+};
+export default LogIn;
