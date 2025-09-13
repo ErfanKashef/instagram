@@ -1,8 +1,8 @@
-import { Index } from ".";
+import Signin from "./components/page/signin";
 
 function App() {
   return <>
-    <Index/>
+    <Signin />
   </>;
 }
 
