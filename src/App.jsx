@@ -1,7 +1,10 @@
+import { Index } from ".";
 import "./App.css";
 
 function App() {
-  return <></>;
+  return <>
+    <Index/>
+  </>;
 }
 
 export default App;
