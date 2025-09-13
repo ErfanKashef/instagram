@@ -3,7 +3,7 @@ import ProfileStats from "./myProfileStats";
 import ProfileInfo from "./myProfileInfo";
 import ProfileGallery from "./myProfileGallery";
 
-const Profile = () => {
+const MyProfile = () => {
   return (
     <div className="container mx-auto">
       <div className="flex justify-center gap-20 py-10">
@@ -31,4 +31,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default MyProfile;
