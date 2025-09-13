@@ -13,7 +13,7 @@ const Signin = () => {
         method="POST"
       >
         <img
-          className="w-20 h-16 mx-auto mb-4"
+          className="pt-2 w-52 h-16 mx-auto mb-4"
           src="../img/Vector (7).png"
           alt="logo"
         />
@@ -22,14 +22,14 @@ const Signin = () => {
           type="email"
           nameItem="email"
           placeholder="Email"
-          classname="border rounded px-3 py-2"
+          classname="border rounded px-3 py-2 w-full"
         />
 
         <Input
           type="text"
           nameItem="username"
           placeholder="User Name"
-          classname="border rounded px-3 py-2"
+          classname="border rounded px-3 py-2 w-full"
         />
 
         <div className="flex items-center relative">
@@ -52,7 +52,7 @@ const Signin = () => {
         <Button
           type="submit"
           nameOfButton="Sign Up"
-          className="bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition"
+          className="bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition w-full"
         />
 
         <div className="flex gap-2 justify-center">
