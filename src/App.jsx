@@ -1,5 +1,4 @@
 import { Index } from ".";
-import "./App.css";
 
 function App() {
   return <>
