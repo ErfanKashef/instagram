@@ -3,6 +3,7 @@ import Layout from "./layout";
 import LogIn from "./components/page/logIn";
 import Signin from "./components/page/signin";
 import Home from "./home";
+import Profile from "./components/page/profile";
 
 export const Routes = createBrowserRouter([
   {
@@ -12,6 +13,7 @@ export const Routes = createBrowserRouter([
       { path: "", element: <Home /> },
       { path: "login", element: <LogIn /> },
       { path: "Signin", element: <Signin /> },
+      { path: "profile", element: <Profile /> },
     ],
   },
 ]);

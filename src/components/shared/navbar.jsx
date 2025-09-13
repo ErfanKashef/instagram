@@ -16,6 +16,11 @@ const Navbar = () => {
       path: "/signup",
       id: 3,
     },
+    {
+      name: "profile",
+      path: "/profile",
+      id: 4,
+    },
   ];
   return <></>;
 };
