@@ -1,4 +1,4 @@
-export default function button({type, className, nameOfButton}) {
+export default function Button({type, className, nameOfButton}) {
     return (
     <div>
         <button
