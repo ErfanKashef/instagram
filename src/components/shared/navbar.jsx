@@ -3,6 +3,7 @@ const Navbar = () => {
     {
       name: "Home",
       path: "/",
+      
     },
     {
       name: "login",
