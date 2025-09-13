@@ -1,14 +1,12 @@
-import { Link } from "react-router-dom";
-import { InstaTitle } from "./InstaTitle";
-import Input from "./input"; 
-import Button from "./button";
 import { useState } from "react";
-import axios from "axios";
+import { Link } from "react-router-dom";
 import { clinet } from "../../lib";
 import appPhoto from '../../assets/Group 91(1).png';
+import { InstaTitle } from "./InstaTitle";
+import Button from "./button";
+import Input from "./input";
 
-
-export function Login() {
+export default function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [accessToken, setAccessToken] = useState(null);
