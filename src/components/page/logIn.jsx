@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { clinet } from "../../lib";
 import appPhoto from '../../assets/Group 91(1).png';
 import { InstaTitle } from "./InstaTitle";
@@ -11,6 +11,7 @@ export default function Login() {
     const [password, setPassword] = useState("");
     const [accessToken, setAccessToken] = useState(null);
     const [error, setError] = useState(null);
+    const navigate = useNavigate()
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -32,6 +33,7 @@ export default function Login() {
         if (data.accessToken) {
             setAccessToken(data.accessToken);
             localStorage.setItem("accessToken", data.accessToken);
+            navigate("/myprofile");
         } else {
             setError("No access token received");
         }
