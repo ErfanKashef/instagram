@@ -1,4 +1,10 @@
+import { useState } from "react";
+import Button from "./button";
+import Input from "./input";
+
 const Signin = () => {
+  const [visible, setVisible] = useState(false);
+
   return (
     <div className="flex justify-center items-center min-h-screen">
       <form
@@ -7,43 +13,57 @@ const Signin = () => {
         method="POST"
       >
         <img
-          className="w-16 h-16 mx-auto mb-4"
+          className="w-20 h-16 mx-auto mb-4"
           src="../img/Vector (7).png"
           alt="logo"
         />
 
-        <input
+        <Input
           type="email"
-          name="email"
+          nameItem="email"
           placeholder="Email"
-          className="border rounded px-3 py-2"
-          required
+          classname="border rounded px-3 py-2"
         />
 
-        <input
+        <Input
           type="text"
-          name="username"
+          nameItem="username"
           placeholder="User Name"
-          className="border rounded px-3 py-2"
-          required
+          classname="border rounded px-3 py-2"
         />
 
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          className="border rounded px-3 py-2"
-          required
-        />
+        <div className="flex items-center relative">
+          <input
+            type={visible ? "text" : "password"}
+            name="password"
+            placeholder="Password"
+            className="border rounded px-3 py-2 w-full"
+            required
+          />
+          <button
+            type="button"
+            onClick={() => setVisible(!visible)}
+            className="text-gray-500 px-3 py-2 absolute right-0"
+          >
+            {visible ? "Hide" : "Show"}
+          </button>
+        </div>
 
-        <button
+        <Button
           type="submit"
+          nameOfButton="Sign Up"
           className="bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition"
-        >
-          Sign Up
-        </button>
+        />
+
+        <div className="flex gap-2 justify-center">
+          <p>Already have an account?</p>
+          <a href="/login" className="text-blue-600 hover:underline">
+            Login
+          </a>
+        </div>
       </form>
     </div>
   );
 };
+
 export default Signin;
