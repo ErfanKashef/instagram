@@ -1,7 +1,14 @@
-export function InstaTitle({LogoWidth, LogoHeight}) {
+import instaLogo from '../../assets/instaLogo.png';
+
+
+export function InstaTitle({ classname }) {
     return (
     <div>
-        <img src="./assets/instaLogo.png" alt="IG Logo" className="w-[{LogoWidth}] h-[{LogoHeight}]"/>
+        <img
+        src={instaLogo}
+        alt="IG Logo"
+        className={classname}
+        />
     </div>
-)
+);
 }
