@@ -1,9 +1,11 @@
-import Signin from "./components/page/signin";
+import { Signin } from '../src/components/page/signin';
 
 function App() {
-  return <>
-    <Signin />
-  </>;
+  return (
+    <>
+      <Signin />
+    </>
+  );
 }
 
 export default App;
