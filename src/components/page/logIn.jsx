@@ -1,10 +1,31 @@
 import { Link } from "react-router-dom";
 import { InstaTitle } from "./InstaTitle";
 import Input from "./input";
-import Button from "daisyui/components/button";
 import { Signin } from "./signin";
+import { useEffect, useState } from "react";
+import Button from "./button";
 
 export function Login() {
+
+    const [userData, setUserData] = useState(null);
+
+    useEffect(() => {
+    fetch(import.meta.env.VITE_API_URL, {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+        username: "johndoe",
+        password: "StrongPassword123",
+    }),
+})
+    .then((response) => response.json())
+    .then((data) => setUserData(data))
+    .catch((err) => console.error(err));
+}, []);
+
+    
     return (
     <div>
         <InstaTitle LogoWidth="255px" LogoHeight="87px"/>
@@ -15,7 +36,7 @@ export function Login() {
             <p>
             Don’t have an account?
             </p>
-            <Link to={<Signin />}/>
+            <Link to="/signin">Go to Signin</Link>
         </span>
         
     </div>
