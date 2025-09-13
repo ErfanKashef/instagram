@@ -1,9 +1,10 @@
-import { Signin } from '../src/components/page/signin';
+import { RouterProvider } from "react-router-dom";
+import { Routes } from "./Routes";
 
 function App() {
   return (
     <>
-      <Signin />
+      <RouterProvider router={Routes} />
     </>
   );
 }

@@ -1,4 +1,4 @@
-export function Signin() {
+const Signin = () => {
   return (
     <div className="flex justify-center items-center min-h-screen">
       <form
@@ -34,7 +34,6 @@ export function Signin() {
           placeholder="Password"
           className="border rounded px-3 py-2"
           required
-          
         />
 
         <button
@@ -46,4 +45,5 @@ export function Signin() {
       </form>
     </div>
   );
-}
+};
+export default Signin;
