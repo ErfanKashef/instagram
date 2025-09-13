@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function input({type, nameItem, placeholder}) {
+export default function Input({type, nameItem, placeholder, classname}) {
     return (
     <div>
         <input

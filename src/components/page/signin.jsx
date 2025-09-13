@@ -1,3 +1,5 @@
+import Input from "./input";
+
 export function Signin() {
     return (
         <div className="flex justify-center items-center min-h-screen">
@@ -12,13 +14,24 @@ export function Signin() {
                     alt="logo"
                 />
 
-                <input
+                <Input type="email" nameItem="email" placeholder='Email' classname="border rounded px-3 py-2"/>
+                <Input type="text" nameItem="email" placeholder='Email' classname="border rounded px-3 py-2"/>
+
+
+
+
+
+
+
+
+
+                {/* /* <input
                     type="email"
                     name="email"
                     placeholder="Email"
                     className="border rounded px-3 py-2"
                     required
-                />
+                /> */ */}
 
                 <input
                     type="text"
