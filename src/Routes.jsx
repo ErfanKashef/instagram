@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import MyProfile from "./components/page/myprofile";
 import Signin from "./components/page/signin";
 import Layout from "./layout";
-import Login from "./components/page/logIn";
+import Login from "./components/page/login";
 import Home from "./home";
 
 export const Routes = createBrowserRouter([
