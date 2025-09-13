@@ -31,7 +31,7 @@ export function Signin() {
                     placeholder="Email"
                     className="border rounded px-3 py-2"
                     required
-                /> */ */}
+                /> */ }
 
                 <input
                     type="text"
