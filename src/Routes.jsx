@@ -7,12 +7,18 @@ import Home from "./home";
 
 export const Routes = createBrowserRouter([
   {
+    path: "Signin",
+    element: <Signin />,
+  },
+  {
+    path: "login",
+    element: <Login />,
+  },
+  {
     path: "/",
     element: <Layout />,
     children: [
       { path: "", element: <Home /> },
-      { path: "login", element: <Login /> },
-      { path: "Signin", element: <Signin /> },
       { path: "MyProfile", element: <MyProfile /> },
     ],
   },
