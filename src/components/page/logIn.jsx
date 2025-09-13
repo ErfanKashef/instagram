@@ -4,7 +4,7 @@ import Input from "./input";
 import Button from "daisyui/components/button";
 import { Signin } from "./signin";
 
-const LogIn = () => {
+export function Login() {
   return (
     <div>
         <InstaTitle LogoWidth="255px" LogoHeight="87px"/>
