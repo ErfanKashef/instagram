@@ -4,6 +4,8 @@ import Signin from "./components/page/signin";
 import Layout from "./layout";
 import Login from "./components/page/logIn";
 import Home from "./home";
+import FollowersList from "./components/page/FollowersList";
+
 
 export const Routes = createBrowserRouter([
   {
@@ -20,6 +22,7 @@ export const Routes = createBrowserRouter([
     children: [
       { path: "home", element: <Home /> },
       { path: "MyProfile", element: <MyProfile /> },
+      { path: "followers/:username", element: <FollowersList /> },
     ],
   },
 ]);
