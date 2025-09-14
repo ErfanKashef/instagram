@@ -4,7 +4,8 @@ import { Routes } from "./Routes";
 function App() {
   return (
     <>
-      <RouterProvider router={Routes} />
+      <RouterProvider router={Routes} /> 
+
     </>
   );
 }
