@@ -5,6 +5,7 @@ import Layout from "./layout";
 import Login from "./components/page/logIn";
 import Home from "./home";
 import FollowersList from "./components/page/FollowersList";
+import FollowingsList from "./components/page/FollowingsList";
 
 
 export const Routes = createBrowserRouter([
@@ -23,6 +24,7 @@ export const Routes = createBrowserRouter([
       { path: "home", element: <Home /> },
       { path: "MyProfile", element: <MyProfile /> },
       { path: "followers/:username", element: <FollowersList /> },
+      { path: "followings/:username", element: <FollowingsList /> },
     ],
   },
 ]);
