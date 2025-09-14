@@ -7,9 +7,11 @@ import {
 } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
 import Search from "./components/Search";
+import CreateModal from "./components/CreateModal";
 
 const Navbar = () => {
   const [searchActive, setSearchActive] = useState(false);
+  const [showCreate, setShowCreate] = useState(false);
 
   return (
     <div className="flex relative h-screen">
@@ -31,7 +33,6 @@ const Navbar = () => {
               className="w-28 h-7 transition-all duration-500 ease-in-out"
             />
           )}
-          {!searchActive}
         </div>
 
         <div className="flex flex-col gap-6">
@@ -52,7 +53,10 @@ const Navbar = () => {
             {!searchActive && <p>Search</p>}
           </div>
 
-          <div className="flex gap-3 items-center transition-all duration-500 ease-in-out">
+          <div
+            className="flex gap-3 items-center cursor-pointer transition-all duration-500 ease-in-out"
+            onClick={() => setShowCreate(true)}
+          >
             <IconSquareRoundedPlus size={24} />
             {!searchActive && <p>Create</p>}
           </div>
@@ -72,7 +76,9 @@ const Navbar = () => {
         </div>
       </div>
 
-      {searchActive && <Search  />}
+      {searchActive && <Search onClose={() => setSearchActive(false)} />}
+
+      {showCreate && <CreateModal onClose={() => setShowCreate(false)} />}
     </div>
   );
 };
