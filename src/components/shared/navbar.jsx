@@ -25,7 +25,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <div className=" flex flex-col gap-3 border-r p-4 pr-20 h-screen">
+    <div className=" flex flex-col gap-3 border-r p-4 pr-20  fixed h-screen">
       <div className="pb-10">
         <img src="/public/img/Vector (7).png" alt="logo" className="w-28 h-7" />
       </div>
