@@ -1,4 +1,48 @@
-const ProfileStats = ({ posts, followers, following }) => {
+import { clinet } from "../../lib";
+import { useEffect, useState } from "react";
+
+const ProfileStats = ({ username }) => {
+  const [posts, setPosts] = useState(0);
+  const [followers, setFollowers] = useState(0);
+  const [following, setFollowing] = useState(0);
+  const getArticles = async () => {
+    try {
+      const res = await clinet.get(`/api/article/u/${username}`);
+      setPosts(res.data.length);
+    } catch (err) {
+      console.error("Error fetching articles:", err.response?.data || err.message);
+    }
+  };
+
+
+  const getFollowers = async () => {
+    try {
+      const res = await clinet.get(`/api/user/followers/${username}`);
+      const followersList = res.data.followers || [];
+      setFollowers(followersList.length);
+    } catch (err) {
+      console.error("Error fetching followers:", err.response?.data || err.message);
+    }
+  };
+
+  const getFollowing = async () => {
+    try {
+      const res = await clinet.get(`/api/user/following/${username}`);
+      const followingList = res.data.following || [];
+      setFollowing(followingList.length);
+    } catch (err) {
+      console.error("Error fetching following:", err.response?.data || err.message);
+    }
+  };
+
+  useEffect(() => {
+    if (username) {
+      getArticles();
+      getFollowers();
+      getFollowing();
+    }
+  }, [username]);
+
   return (
     <div className="flex flex-row gap-7">
       <div className="flex gap-2 items-center">
